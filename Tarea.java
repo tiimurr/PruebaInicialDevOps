@@ -9,6 +9,13 @@ package com.mycompany.mavenproject1;
  * @author daw2
  */
 public class Tarea {
+
     String nombre;
     String descripcion;
+
+    public Tarea(String nombre, String descripcion) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+    }
+
 }
