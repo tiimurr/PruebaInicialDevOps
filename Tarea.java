@@ -12,10 +12,24 @@ public class Tarea {
 
     String nombre;
     String descripcion;
+    String estado;
 
     public Tarea(String nombre, String descripcion) {
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.estado = "PENDIENTE";
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("---TAREA---");
+        sb.append("\nNombre: ").append(nombre);
+        sb.append("\nDescripción: ").append(descripcion);
+        sb.append("\nEstado: ").append(estado);
+        return sb.toString();
+    }
+    
+    
 
 }

@@ -16,34 +16,36 @@ public class GestorTareas {
 
         ArrayList<Tarea> tareas = new ArrayList<Tarea>();
         int opcion = 0;
-        System.out.println("---MENU INTERACTIVO---");
-        System.out.println("1- Listar las tareas.");
-        System.out.println("2- Anadir una tarea.");
-        System.out.println("3- Marcar completada.");
-        System.out.println("4- Eliminar tarea.");
-        System.out.println("0- SALIR.");
-        System.out.println("Introduzca la opcion deseada: ");
+        do {
+            System.out.println("---MENU INTERACTIVO---");
+            System.out.println("1- Listar las tareas.");
+            System.out.println("2- Anadir una tarea.");
+            System.out.println("3- Marcar completada.");
+            System.out.println("4- Eliminar tarea.");
+            System.out.println("0- SALIR.");
+            System.out.println("Introduzca la opcion deseada: ");
+            opcion = teclado.nextInt();
+            teclado.nextLine();
+            switch (opcion) {
+                case 1 -> {
+                    System.out.println(tareas);
+                }
+                case 2 -> {
+                    tareas.add(crearTarea());
+                }
+                case 3 -> {
+                    
+                }
+                case 4 -> {
+                    
+                }
 
-        switch (opcion) {
-            case 1 -> {
-                
-            }
-            case 2 -> {
-                tareas.add(crearTarea());
-            }
-            case 3 -> {
-                
-            }
-            case 4 -> {
-            }
+                default -> {
+                    System.out.println("Ha ocurrido un error.");
+                }
 
-            case 0 -> {
             }
-            default -> {
-                System.out.println("Ha ocurrido un error.");
-            }
-
-        }
+        } while (opcion != 0);
     }
     static Scanner teclado = new Scanner(System.in);
 
